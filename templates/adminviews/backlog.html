@@ -1,0 +1,23 @@
+{% extends "../ui/adminbase.html" %}
+
+{% block mainpanel %}
+	<div class="toolbar">
+		<a href="/admin/" class="nextten">next set</a><a href="/admin/allapproved" class="nextten">all approved</a><a href="/admin/allblocked" class="nextten">all blocked</a>
+	</div>
+		<h3>Unmoderated messages ({{count}})</h3>
+	{% for message in messages %}
+	<div id="{{message.messageid}}" class="twittermessage">
+	<table>
+	<tr>
+		<td class="buttons">
+			<div><span class="button"><a href="javascript:callMessageAction('approve',{{message.messageid}}, 'list')" class="approve">approve</a></span><span class="button"><a href="javascript:callMessageAction('block',{{message.messageid}}, 'list')" class="block">&nbsp;&nbsp;block&nbsp;&nbsp;</a></span></div>
+		</td>
+		<td class="tweet">
+			<div class="user">from <strong><a href="http://www.twitter.com/{{message.username}}">{{message.username}}</a></strong>: {{message.message}}</div>
+			<div class="messagedate">[{{message.message_date|timesince}} ago]</div>
+		</td>
+	</tr>
+	</table>
+	</div>
+	{% endfor %}
+{% endblock %}

@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+ "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title>Activate09 Twitter Moderation</title>
+	<link rel="stylesheet" href="/styles/admin.css" type="text/css">
+	<script type="text/javascript" src="/js/jquery/jquery-1.3.min.js"></script>
+	<script type="text/javascript">
+		<!--
+		function callMessageAction(action, messageid, style) {
+			url = "/admin/" + action + "single/" + messageid;
+			messagediv = "#" + messageid;
+			$(messagediv).load(url);
+			if (style == "list") {
+				$(messagediv).remove();
+			}
+		}
+		//   -->
+	</script>
+
+</head>
+<body>
+	<div class="header">
+	<span id="headertitle"><h1>Activate09 Twitter Moderation</h1></span>{% if user %}<span id="logout"><a href="/admin/logout">Log out</a></span> {% endif %}
+	</div>
+	<div class="main">
+		{% block mainpanel %}
+		{% endblock %}
+	</div>
+</body>
+</html>

@@ -1,0 +1,106 @@
+body {
+	background-color: #4978bc;
+	font-family: "Helvetica Neue", "Helvetica", "Arial", Sans-serif;
+}
+
+span.twitterfall {
+	float:left;
+}
+
+span.logo {
+	float:right;
+	text-align:left;
+	max-width: 300px;
+	color: #acf;
+	font-size: 140%;
+	letter-spacing: -0.7px;
+	text-transform: uppercase;
+}
+
+img.logo {
+	border-bottom: 5px solid #fc0;
+	padding-top: 10px;
+	padding-bottom: 26px;
+	margin-bottom: 3px;
+}
+
+span.thishashtag {
+	color: #fff;
+	font-weight: bold;
+}
+
+span.userimage {
+	float: left;
+	vertical-align: middle;
+	margin: 10px;
+	height: 48px;
+}
+
+img.userimage {
+	padding-top: 12px;
+}
+
+span.pointy {
+	padding-top: 15px;
+	float:left;
+	margin-top: 15px;
+}
+
+span.tweet {
+	float: left;
+	vertical-align: middle;
+	min-height: 80px;
+	background-color: #fff;
+	width: 1200px;
+	padding: 20px;
+	font-size: 120%;
+	color: #222;
+}
+
+div.tweeter {
+	border-bottom: 2px solid #4978bc;
+	padding-bottom: 0px;
+	margin-bottom: 15px;
+}
+
+strong.tweeter {
+	font-size: 80%;
+	color: #f00;
+	font-weight: bold;
+}
+
+div.message {
+	clear:both;
+	padding: 10px;
+}
+
+div.messagedate {
+	padding-top: 10px;
+	font-size: 80%;
+	color: #999;
+}
+
+
+a {
+	background-color: #def;
+	text-decoration: none;
+	color: #000;
+}
+
+a:hover {
+	background-color: #cdf;
+	text-decoration: underline;
+	color: #000;
+}
+
+span.hashtag {
+	background-color: #fff;
+	font-weight: bold;
+	color: #333;
+}
+
+#activate09 {
+	background-color: #def;
+	font-weight: bold;
+	color: #000;
+}

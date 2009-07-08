@@ -1,0 +1,11 @@
+{% extends "../ui/adminbase.html" %}
+
+{% block mainpanel %}
+	{% if not user %}
+		<form action="/admin/login" method="POST">
+			{% include "../adminforms/user.html"%}
+			<br />
+			<input type="submit" value="login" />
+		</form>
+	{% endif %}
+{% endblock %}

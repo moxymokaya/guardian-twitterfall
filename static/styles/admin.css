@@ -1,0 +1,139 @@
+body {
+	background-color: #fff;
+	color: #000;
+	font-family: "Helvetica Neue", "Helvetica", "Arial", Sans-serif;
+	font-size: 14px;
+}
+
+h1 {
+	color: #30f;
+}
+
+a {
+	color: #30f;
+	background-color: #eef;
+	text-underline: none;
+}
+
+#headertitle {
+	float: left;
+}
+
+#logout {
+	float: right;
+}
+
+
+div.main {
+	clear:both;
+}
+
+div.header {
+	width: 100%;
+}
+
+div.toolbar {
+	border-top: 2px solid #333;
+	padding: 10px;
+	border-bottom: 1px solid #999;
+	margin-bottom: 10px;
+}
+
+td.buttons {
+	width: 170px;
+}
+
+div.twittermessage {
+	padding: 10px;
+}
+
+div.user {
+	font-size: 90%;
+	margin-left: 20px;
+}
+
+div.messagedate {
+	font-size: 90%;
+	margin-left: 20px;
+}
+
+div.messagetext {
+	font-size: 170%;
+	margin-top: 5px;
+	margin-left: 20px;
+	width: 800px;
+}
+
+div.actiontext {
+	font-weight: bold;
+	font-size: 170%;
+	margin-bottom: 20px;
+}
+
+span.button {
+	margin: 2px;
+	font-weight: bold;
+}
+
+a.nextten {
+	font-weight: bold;
+	background-color: #666;
+	color: #fff;
+	text-decoration: none;
+	padding: 7px;
+	border: 1px solid #666;
+	margin-right: 3px;
+}
+
+a.nextten:hover {
+	background-color: #ccc;
+	color: #000;
+	text-decoration: none;
+	padding: 7px;
+	border: 1px solid #000;
+}
+
+input.approveset {
+	font-family: "Helvetica Neue", "Helvetica", "Arial", Sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	background-color: #090;
+	color: #fff;
+	text-decoration: none;
+	padding: 7px;
+	border: 1px solid #eee;
+}
+
+input.approveset:hover {
+	background-color: #0c0;
+	color: #000;
+	border: 1px solid #000;
+}
+
+a.approve {
+	background-color: #090;
+	color: #fff;
+	text-decoration: none;
+	padding: 7px;
+	border: 1px solid #eee;
+}
+
+a.approve:hover {
+	background-color: #0c0;
+	color: #000;
+	border: 1px solid #000;
+}
+
+a.block {
+	background-color: #900;
+	color: #fff;	
+	text-decoration: none;
+	padding: 7px;
+	border: 1px solid #eee;
+}
+
+a.block:hover {
+	background-color: #f00;
+	color: #000;	
+	border: 1px solid #000;
+}

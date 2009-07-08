@@ -1,0 +1,17 @@
+{% extends "../ui/adminbase.html" %}
+
+{% block mainpanel %}
+	{% if not user %}
+		{% if users %}
+			There is already a master user set
+		{% else %}
+			<form action="/services/initialiseadmin" method="POST">
+			{% include "../adminforms/user.html"%}
+				<br />
+				<input type="submit" value="create user" />
+			</form>
+		{% endif %}
+	{% else %}
+		User {{user.email}} created
+	{% endif %}
+{% endblock %}
