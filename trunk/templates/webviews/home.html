@@ -1,0 +1,26 @@
+{% extends "../ui/base.html" %}
+
+{% block mainpanel %}
+	<span class="twitterfall">
+	<div id="streamblock">
+	</div>
+	<script type="text/javascript">
+		<!--
+		function timedRefresh(timeoutPeriod) {
+			setInterval(refreshStream,timeoutPeriod);
+		}
+		
+		function refreshStream() {
+			$('#streamblock').load("/messages");
+		}
+
+		refreshStream();
+		timedRefresh(10000);
+		//   -->
+	</script>
+	</span>
+	<span class="logo">
+		<img src="/images/logo.png" class="logo">
+		Tag all of your blog posts, flickr images and tweets with <span class="thishashtag">#activate09</span> so we can bring the conversation together
+	</span>
+{% endblock %}

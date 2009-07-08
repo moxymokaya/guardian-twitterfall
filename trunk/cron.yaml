@@ -1,0 +1,7 @@
+cron:
+- description: find status messages
+  url: /services/search/activate09
+  schedule: every 1 minutes
+
+
+

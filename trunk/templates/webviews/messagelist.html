@@ -1,0 +1,10 @@
+	{% for message in messages %}
+	<div class="message">
+		<span class="userimage"><img src="{{message.imgurl}}" height="48" width="48"" class="userimage" /"></span>
+		<span class="pointy"><img src="/images/pointy.png" height="35" width="18"></span>
+		<span class="tweet">
+			<div class="tweeter"><strong class="tweeter">{{message.username.upper}}</strong></div><div>{{message.message}}</div>
+			<div class="messagedate">{{message.message_date|timesince}} ago</div>
+		</span>
+	</div>
+	{% endfor %}

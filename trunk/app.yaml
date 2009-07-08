@@ -1,0 +1,26 @@
+application: guardian-twitterfall
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /styles
+  static_dir: static/styles
+
+- url: /images
+  static_dir: static/images
+
+- url: /js
+  static_dir: static/js
+  
+- url: /services/.*
+  script: services.py
+
+- url: /admin/.*
+  script: admin.py
+
+- url: /api/.*
+  script: api.py
+
+- url: .*
+  script: main.py

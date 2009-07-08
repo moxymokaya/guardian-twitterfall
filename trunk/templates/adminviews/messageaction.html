@@ -1,0 +1,19 @@
+	<table>
+	<tr>
+		<td class="buttons">
+			<div class="actiontext">{{actiontext}}</div>
+			{% ifequal actiontext "approved" %}
+			<div><span class="button"><a href="javascript:callMessageAction('block',{{message.messageid}})" class="block">&nbsp;&nbsp;block&nbsp;&nbsp;</a></span></div>
+			{% else %}
+			<div><span class="button"><a href="javascript:callMessageAction('approve',{{message.messageid}})" class="approve">approve</a></span></div>
+			{% endifequal %}
+		</td>
+		<td class="tweet">
+			<div class="user">from <strong><a href="http://www.twitter.com/{{message.username}}">{{message.username}}</a></strong></div>
+			<div class="messagetext">
+				{{message.message}}
+			</div>
+			<div class="messagedate">[{{message.message_date|timesince}} ago]</div>
+		</td>
+	</tr>
+	</table>

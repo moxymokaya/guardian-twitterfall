@@ -1,0 +1,49 @@
+{% extends "../ui/adminbase.html" %}
+
+{% block mainpanel %}
+	<script type="text/javascript">
+		<!--
+		function timedRefresh(timeoutPeriod) {
+			setTimeout("location.reload(true);",timeoutPeriod);
+		}
+		//   -->
+	</script>
+	<div class="toolbar">
+	{% if messageset %}
+		{% if aprroveset %}
+			<form action="/admin/approveset" method="POST"><input name="messageset" type="hidden" value="{{messageset}}" />
+			<input type="submit" value="approve this set" class="approveset">
+		{% endif %}
+	{% else %}
+	<script type="text/javascript">
+		<!--
+			timedRefresh(10000);
+		//   -->
+	</script>
+	{% endif %}
+	<a href="/admin/" class="nextten">next set</a><a href="/admin/allapproved" class="nextten">all approved</a><a href="/admin/allblocked" class="nextten">all blocked</a>
+	</div>
+	{% for message in messages %}
+	<div id="{{message.messageid}}" class="twittermessage">
+	<table>
+	<tr>
+		<td class="buttons">
+			<div><span class="button"><a href="javascript:callMessageAction('approve',{{message.messageid}}, 'admin')" class="approve">approve</a></span><span class="button"><a href="javascript:callMessageAction('block',{{message.messageid}}, 'admin')" class="block">&nbsp;&nbsp;block&nbsp;&nbsp;</a></span></div>
+		</td>
+		<td class="tweet">
+			<div class="user">from <strong><a href="http://www.twitter.com/{{message.username}}">{{message.username}}</a></strong></div>
+			<div class="messagetext">
+				{{message.message}}
+			</div>
+			<div class="messagedate">[{{message.message_date|timesince}} ago]</div>
+		</td>
+	</tr>
+	</table>
+	</div>
+	{% endfor %}
+	{% if messageset %}
+	<div class="toolbar">
+	<a href="/admin/" class="nextten">next set</a>
+	</div>
+	{% endif %}
+{% endblock %}
